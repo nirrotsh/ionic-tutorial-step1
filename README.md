@@ -3,6 +3,8 @@ This repository is part of the a presentation on developing mobile applications 
 
 The main target of the presentation is windows-oriented, so I will use windows command line and android development kit only (as IOS XCode does not work outside of OS-X)
 
+This demonstration is based on the ionic tutorial found at:  [http://www.tutorialspoint.com/ionic](http://www.tutorialspoint.com/ionic)
+
 ## Todo
 - Add link to presentation
 - Add OS-X command line alternatives
@@ -51,36 +53,52 @@ e. If you want to view it in a web browser
 C:\Projects\Demo\ionic-tutorial\ionic_sample_step1> ionic serv
 ```
 
-**Congrattiulations, you just built your hybrid app :-)**
+**Congratulations, you just built your hybrid app :-)**
 
-*Now, lets add some content into it*
+## Step 3: Modify the application
+Most of the changes will be done on next steps, for now we will just update some styling and show you how to edit the application.
+
+First switch to the `www` folder. This is where you will mostly spend your time as it contains the application files.
+```sh
+cd www
+```
+and open the `index.html` file. 
+
+Scroll down to the `ion-header-bar`element.
+* change its style from 'bar-stable' to 'bar-positive'. This will change the header background to light blue.
+* change the header title from 'Ionic Blank Starter' to 'My Tasks'
+
+And just because I hate undescriptive names, change the angular app name (the `ng-app` attribute in the `body` element from "starter" to "MyTasks"
+So the new header will look like this:
+```
+   <body ng-app="MyTasks">
+    <ion-pane>
+      <ion-header-bar class="bar-positive">
+        <h1 class="title">My Tasks</h1>
+      </ion-header-bar>
+      <ion-content>
+      </ion-content>
+    </ion-pane>
+  </body>
+```
+And since we changed the application name in the HTML file, we will also need to modify the main module name of angular application file.
+
+To do this, open the `app.js` file under the `js` folder (this is the angular main module) and change change the angular module name on top from 'starter' to 'MyTasks'.
+```
+angular.module('MyTasks', ['ionic'])
+```
+Now run the application to test it
+
 
 ### Version
+
 0.1.0
 
+###License
+
+MIT
+
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-
-
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [@thomasfuchs]: <http://twitter.com/thomasfuchs>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [marked]: <https://github.com/chjj/marked>
-   [Ace Editor]: <http://ace.ajax.org>
-   
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [keymaster.js]: <https://github.com/madrobby/keymaster>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
-   [express]: <http://expressjs.com>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>
-
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]:  <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
 
    [gitcmd]: <https://git-scm.com/downloads>
    [node.js]: <http://nodejs.org>
