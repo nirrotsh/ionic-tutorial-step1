@@ -13,6 +13,7 @@ The main target of the presentation is windows-oriented, so I will use windows c
 You will need the following enviroments installed before we can start
 * [node.js]: evented I/O for the backend (Use version 4, version 5 is currently not supported)
 * [AndroidStudio]: Android development enviroment + development kit
+
 ## Optional
 * [gitcmd]: GIT client
 * [Brackets.io]: HTML & javascript editor (you can use whetever you feel comfortable with)
@@ -43,7 +44,7 @@ C:\Projects\Demo\ionic-tutorial\ionic_sample_step1> ionic build android
 ```
 d. Run and test it
 ```sh
-:\Projects\Demo\ionic-tutorial\ionic_sample_step1> ionic run android
+C:\Projects\Demo\ionic-tutorial\ionic_sample_step1> ionic run android
 ```
 **Congrattiulations, you just built your hybrid app :-)**
 
