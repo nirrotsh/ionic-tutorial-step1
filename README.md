@@ -46,6 +46,11 @@ d. Run and test it
 ```sh
 C:\Projects\Demo\ionic-tutorial\ionic_sample_step1> ionic run android
 ```
+e. If you want to view it in a web browser
+```sh
+C:\Projects\Demo\ionic-tutorial\ionic_sample_step1> ionic serv
+```
+
 **Congrattiulations, you just built your hybrid app :-)**
 
 *Now, lets add some content into it*
